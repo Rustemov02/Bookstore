@@ -8,35 +8,21 @@ import "slick-carousel/slick/slick-theme.css";
 // import img3 from './images/img-3.jpg'
 
 import Header from './Header';
-import Slide from './List';
-import Feature from './Feature';
+import Slide from './List'; 
 import Bestselling from './Bestselling';
-import TestApi from './TestApi';
+import Categories from './Categories'; 
+import Feature from './Feature';
 
-// import { getBestSelling } from './Redux/bookSlice'
-// import { useDispatch } from 'react-redux';
-// import  {useEffect} from 'react'
-
-function App() {
-  // const dispatch = useDispatch()
-  // const bestSellingData = useSelector(state => state.books.bestSelling)
-
-  // useEffect(() => {
-  //   fetch('https://api.nytimes.com/svc/books/v3/lists/full-overview.json?api-key=LgGpQsQpbEHlA1rGv2C40o9qgkfKeWgL')
-  //     .then(response => response.json())
-  //     .then(data => {
-  //       dispatch(getBestSelling(data.results.lists[13].books))
-  //     })
-  // }, [])
-
+function App() { 
+ 
   return (
     <div>
 
       <Header />
       <Slide />
-      <Feature />
+      <Categories />
       <Bestselling />
-      <TestApi />
+      <Feature/>
 
     </div>
   );

@@ -1,40 +1,39 @@
+import React from "react";
+
+import { Route, Routes, NavLink } from 'react-router-dom'
+import Advice from "./Advice";
+import Business from "./Business";
+import Fiction from './Fiction'
+
+import Box from '@mui/material/Box';
+import BottomNavigation from '@mui/material/BottomNavigation';
+import BottomNavigationAction from '@mui/material/BottomNavigationAction';
+import RestoreIcon from '@mui/icons-material/Restore';
+import FavoriteIcon from '@mui/icons-material/Favorite';
+import LocationOnIcon from '@mui/icons-material/LocationOn';
+
 function Feature() {
+
+    const [value, setValue] = React.useState(0);
     return (
-        <div className='mt-5 p-4'>
+        <div className="border border-warning">
+            <h2 className="border border-warning">Featured Books</h2>
+            <NavLink to='/' > Advice page</NavLink>
+            <NavLink to='/business' > Business page</NavLink>
+            <NavLink to='/fiction' > Fiction page</NavLink>
 
-            
-            <h2 className='p-2 m-1'>Featured Categories</h2>
-            {/* BOXES */}
-            <div className='mt-5 d-flex flex-row justify-content-evenly flex-wrap'>
-
-                <div className='p-4 m-1 font-size-warning' style={{ backgroundColor: "#FAEBD7" }}>
-                    <i className="fa-solid fa-book pb-3" style={{ fontSize: '45px', color: 'blue' }}></i>
-                    <h4>Arts & Photography</h4>
-                    <p>Shop Now</p>
-                </div>
-
-                <div className='p-4 m-1 font-size-warning' style={{ backgroundColor: "#FAEBD7" }}>
-                    <i className="fa-solid fa-book pb-3" style={{ fontSize: '45px', color: 'blue' }}></i>
-                    <h4>Arts & Photography</h4>
-                    <p>Shop Now</p>
-                </div>
-
-                <div className='p-4 m-1 font-size-warning' style={{ backgroundColor: "#FAEBD7" }}>
-                    <i className="fa-solid fa-book pb-3" style={{ fontSize: '45px', color: 'blue' }}></i>
-                    <h4>Arts & Photography</h4>
-                    <p>Shop Now</p>
-                </div>
-
-                <div className='p-4 m-1 font-size-warning' style={{ backgroundColor: "#FAEBD7" }}>
-                    <i className="fa-solid fa-book pb-3" style={{ fontSize: '45px', color: 'blue' }}></i>
-                    <h4>Arts & Photography</h4>
-                    <p>Shop Now</p>
-                </div> 
-            </div>
+           
 
 
-        </div>
+
+            <Routes>
+                <Route path='/' element={<Advice />} />
+                <Route path='/business' element={<Business />} />
+                <Route path='/fiction' element={<Fiction />} />
+            </Routes>
+        </div >
     )
 }
+
 
 export default Feature

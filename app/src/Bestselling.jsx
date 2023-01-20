@@ -28,9 +28,9 @@ export default class Bestselling extends Component {
             pauseOnHover: true
         };
         return (
-            <div className='mt-5 p-4' style={{ border: 'solid black 1px' }}>
-                <h2>Best Selling Books</h2>
-                <Slider style={{ border: 'solid blue 1px', padding: '20px'  , display: 'flex', justifyContent: 'center' }} {...settings}>
+            <div className='mt-5 p-4' style={{ border: 'solid black 1px',backgroundColor : '#385170' }}>
+                <h2 className='p-2 m-1 white'>Best Selling Books</h2>
+                <Slider style={{padding: '20px'  , display: 'flex', justifyContent: 'center' }} {...settings}>
                     {/* Card Item */}
 
                     {data.fiction.map((item, index) => (
