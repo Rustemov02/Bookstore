@@ -1,6 +1,6 @@
 function Feature() {
     return (
-        <div className='mt-5 p-4 '>
+        <div className='mt-5 p-4'>
 
             
             <h2 className='p-2 m-1'>Featured Categories</h2>

@@ -1,6 +1,8 @@
 import { Dropdown, Button, Card } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css'
 
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 // import img1 from './images/img-1.jpg'
 // import img2 from './images/img-2.jpg'
 // import img3 from './images/img-3.jpg'
