@@ -12,6 +12,7 @@ import Slide from './List';
 import Bestselling from './Bestselling';
 import Categories from './Categories'; 
 import Feature from './Feature';
+import Release from './Releases';
 
 function App() { 
  
@@ -23,7 +24,7 @@ function App() {
       <Categories />
       <Bestselling />
       <Feature/>
-
+      <Release/>
     </div>
   );
 }

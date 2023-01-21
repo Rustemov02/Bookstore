@@ -132,5 +132,173 @@
             "author": "Patrick Radden Keefe",
             "book_image": "https://storage.googleapis.com/du-prd/books/images/9780385545686.jpg"
         }
+    ],
+    "romance": [
+        {
+            "title": "ATOMIC HABITS",
+            "author": "James Clear",
+            "book_image": "https://storage.googleapis.com/du-prd/books/images/9780735211292.jpg"
+        },
+        {
+            "title": "THE BOY, THE MOLE, THE FOX AND THE HORSE",
+            "author": "Charlie Mackesy",
+            "book_image": "https://storage.googleapis.com/du-prd/books/images/9780062976581.jpg"
+        },
+        {
+            "title": "NEVER FINISHED",
+            "author": "David Goggins",
+            "book_image": "https://storage.googleapis.com/du-prd/books/images/9781544534077.jpg"
+        },
+        {
+            "title": "GO-TO DINNERS",
+            "author": "Ina Garten",
+            "book_image": "https://storage.googleapis.com/du-prd/books/images/9781984822789.jpg"
+        },
+        {
+            "title": "FAITH STILL MOVES MOUNTAINS",
+            "author": "Harris Faulkner",
+            "book_image": "https://storage.googleapis.com/du-prd/books/images/9780063225930.jpg"
+        },
+        {
+            "title": "ATLAS OF THE HEART",
+            "author": "Brené Brown",
+            "book_image": "https://storage.googleapis.com/du-prd/books/images/9780399592553.jpg"
+        },
+        {
+            "title": "CAN'T HURT ME",
+            "author": "David Goggins",
+            "book_image": "https://storage.googleapis.com/du-prd/books/images/9781544512280.jpg"
+        },
+        {
+            "title": "LIGHTER",
+            "author": "Yung Pueblo",
+            "book_image": "https://storage.googleapis.com/du-prd/books/images/9780593233177.jpg"
+        }
+    ],
+    "onSale": [
+        {
+            "id": 7,
+            "title": "LOATHE TO LOVE YOU",
+            "author": "Ali Hazelwood",
+            "book_image": "https://storage.googleapis.com/du-prd/books/images/9780593437803.jpg"
+        },
+        {
+            "id": 2,
+            "title": "WITHOUT A TRACE",
+            "author": "Danielle Steel",
+            "book_image": "https://storage.googleapis.com/du-prd/books/images/9781984821867.jpg"
+        },
+        {
+            "title": "NEVER FINISHED",
+            "author": "David Goggins",
+            "book_image": "https://storage.googleapis.com/du-prd/books/images/9781544534077.jpg"
+        },
+        {
+            "title": "GO-TO DINNERS",
+            "author": "Ina Garten",
+            "book_image": "https://storage.googleapis.com/du-prd/books/images/9781984822789.jpg"
+        },
+        {
+            "title": "NEVER FINISHED",
+            "author": "David Goggins",
+            "book_image": "https://storage.googleapis.com/du-prd/books/images/9781544534077.jpg"
+        },
+        {
+            "title": "ATLAS OF THE HEART",
+            "author": "Brené Brown",
+            "book_image": "https://storage.googleapis.com/du-prd/books/images/9780399592553.jpg"
+        },
+        {
+            "title": "ATLAS OF THE HEART",
+            "author": "Brené Brown",
+            "book_image": "https://storage.googleapis.com/du-prd/books/images/9780399592553.jpg"
+        },
+        {
+            "title": "CAN'T HURT ME",
+            "author": "David Goggins",
+            "book_image": "https://storage.googleapis.com/du-prd/books/images/9781544512280.jpg"
+        }
+    ],
+    "featured": [
+        {
+            "title": "CAN'T HURT ME",
+            "author": "David Goggins",
+            "book_image": "https://storage.googleapis.com/du-prd/books/images/9781544512280.jpg"
+        },
+        {
+            "title": "LIGHTER",
+            "author": "Yung Pueblo",
+            "book_image": "https://storage.googleapis.com/du-prd/books/images/9780593233177.jpg"
+        },
+        {
+            "title": "FAITH STILL MOVES MOUNTAINS",
+            "author": "Harris Faulkner",
+            "book_image": "https://storage.googleapis.com/du-prd/books/images/9780063225930.jpg"
+        },
+        {
+            "title": "CAN'T HURT ME",
+            "author": "David Goggins",
+            "book_image": "https://storage.googleapis.com/du-prd/books/images/9781544512280.jpg"
+        },
+        {
+            "title": "LIGHTER",
+            "author": "Yung Pueblo",
+            "book_image": "https://storage.googleapis.com/du-prd/books/images/9780593233177.jpg"
+        },
+        {
+            "id": 4,
+            "title": "THE HOUSE IN THE PINES",
+            "author": "Ana Reyes",
+            "book_image": "https://storage.googleapis.com/du-prd/books/images/9780593186718.jpg"
+        },
+        {
+            "id": 5,
+            "title": "THE SILENT PATIENT",
+            "author": "Alex Michaelides",
+            "book_image": "https://storage.googleapis.com/du-prd/books/images/9781250301697.jpg"
+        },
+        {
+            "id": 7,
+            "title": "LOATHE TO LOVE YOU",
+            "author": "Ali Hazelwood",
+            "book_image": "https://storage.googleapis.com/du-prd/books/images/9780593437803.jpg"
+        }
+    ],
+    "most-viewed": [
+        {
+            "title": "EXTREME OWNERSHIP",
+            "author": "Jocko Willink and Leif Babin",
+            "book_image": "https://storage.googleapis.com/du-prd/books/images/9781466874961.jpg"
+        },
+        {
+            "title": "FINANCIAL FEMINIST",
+            "author": "Tori Dunlap",
+            "book_image": "https://storage.googleapis.com/du-prd/books/images/9780063260269.jpg"
+        },
+        {
+            "title": "OUTLIERS",
+            "author": "Malcolm Gladwell",
+            "book_image": "https://storage.googleapis.com/du-prd/books/images/9780316017930.jpg"
+        },
+        {
+            "title": "EMPIRE OF PAIN",
+            "author": "Patrick Radden Keefe",
+            "book_image": "https://storage.googleapis.com/du-prd/books/images/9780385545686.jpg"
+        },
+        {
+            "title": "CHIP WAR",
+            "author": "Chris Miller",
+            "book_image": "https://storage.googleapis.com/du-prd/books/images/9781982172008.jpg"
+        },
+        {
+            "title": "ATLAS OF THE HEART",
+            "author": "Brené Brown",
+            "book_image": "https://storage.googleapis.com/du-prd/books/images/9780399592553.jpg"
+        },
+        {
+            "title": "CAN'T HURT ME",
+            "author": "David Goggins",
+            "book_image": "https://storage.googleapis.com/du-prd/books/images/9781544512280.jpg"
+        }
     ]
 }

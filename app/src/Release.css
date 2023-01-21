@@ -1,0 +1,9 @@
+.link .link_item{ 
+    text-decoration: none;
+    font-size: 18px;
+    color: gray;
+    padding: 15px 20px;
+}
+.link .link_item:hover{
+    color: black; 
+} 

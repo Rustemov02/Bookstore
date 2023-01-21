@@ -8,12 +8,12 @@ import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 
-function Fiction() {
+function Romance() {
     return (
         <> 
             <div style={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'center',backgroundColor : '#fdffcd' }}>
 
-                {data.fiction.map((item, index) => (
+                {data.romance.map((item, index) => (
                     <div key={index} style={{ width: '250px', padding: '10px', margin: '10px' }}>
 
 
@@ -25,7 +25,7 @@ function Fiction() {
                                     height="170"
                                     image={item.book_image}
                                 />
-                                <CardContent >
+                                <CardContent style={{}}>
                                     <Typography gutterBottom variant="h6" component="div" style={{ color: 'red', height: '50px', marginBottom: '5px' }}>
                                         {item.title}
                                     </Typography>
@@ -47,4 +47,4 @@ function Fiction() {
 }
 
 
-export default Fiction
+export default Romance

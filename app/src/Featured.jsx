@@ -8,12 +8,12 @@ import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 
-function Fiction() {
+function Featured() {
     return (
         <> 
             <div style={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'center',backgroundColor : '#fdffcd' }}>
 
-                {data.fiction.map((item, index) => (
+                {data.featured.map((item, index) => (
                     <div key={index} style={{ width: '250px', padding: '10px', margin: '10px' }}>
 
 
@@ -47,4 +47,4 @@ function Fiction() {
 }
 
 
-export default Fiction
+export default Featured

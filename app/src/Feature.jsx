@@ -1,23 +1,23 @@
 import React from "react";
 
 import { Route, Routes, NavLink } from 'react-router-dom'
-import Advice from "./Advice";
-import Business from "./Business";
-import Fiction from './Fiction'
+import Sale from "./Sale";
+import Featured from "./Featured";
+import MostViewed from "./MostViewed";
 
 import './Feature.css'
 
 function Feature() {
- 
+
     return (
         <div className=""  >
 
-            <div className="feature-container" style={{backgroundColor : '#fdffcd'}}>
+            <div className="feature-container" style={{ backgroundColor: '#fdffcd' }}>
                 <h2 className="">Featured Books</h2>
                 <div className="link">
-                <NavLink className='link_item'  to='/ ' > Business page</NavLink>
-                <NavLink className='link_item'  to='/advice' > Advice page</NavLink>
-                <NavLink className='link_item'  to='/fiction' > Fiction page</NavLink>
+                    <NavLink className='link_item' to='/' > On Sale</NavLink>
+                    <NavLink className='link_item' to='/featured ' > Featured</NavLink>
+                    <NavLink className='link_item' to='/most_viewed' > Most Viewed</NavLink>
                 </div>
             </div>
 
@@ -26,9 +26,9 @@ function Feature() {
 
 
             <Routes>
-                <Route path='/advice' element={<Advice />} />
-                <Route path='/' element={<Business />} />
-                <Route path='/fiction' element={<Fiction />} />
+                <Route index path='/' element={<Sale />} />
+                <Route path='/featured' element={<Featured />} />
+                <Route path='/most_viewed' element={<MostViewed />} />
             </Routes>
         </div >
     )
