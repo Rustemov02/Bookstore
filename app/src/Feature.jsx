@@ -5,30 +5,29 @@ import Advice from "./Advice";
 import Business from "./Business";
 import Fiction from './Fiction'
 
-import Box from '@mui/material/Box';
-import BottomNavigation from '@mui/material/BottomNavigation';
-import BottomNavigationAction from '@mui/material/BottomNavigationAction';
-import RestoreIcon from '@mui/icons-material/Restore';
-import FavoriteIcon from '@mui/icons-material/Favorite';
-import LocationOnIcon from '@mui/icons-material/LocationOn';
+import './Feature.css'
 
 function Feature() {
-
-    const [value, setValue] = React.useState(0);
+ 
     return (
-        <div className="border border-warning">
-            <h2 className="border border-warning">Featured Books</h2>
-            <NavLink to='/' > Advice page</NavLink>
-            <NavLink to='/business' > Business page</NavLink>
-            <NavLink to='/fiction' > Fiction page</NavLink>
+        <div className=""  >
 
-           
+            <div className="feature-container" style={{backgroundColor : '#fdffcd'}}>
+                <h2 className="">Featured Books</h2>
+                <div className="link">
+                <NavLink className='link_item'  to='/ ' > Business page</NavLink>
+                <NavLink className='link_item'  to='/advice' > Advice page</NavLink>
+                <NavLink className='link_item'  to='/fiction' > Fiction page</NavLink>
+                </div>
+            </div>
+
+
 
 
 
             <Routes>
-                <Route path='/' element={<Advice />} />
-                <Route path='/business' element={<Business />} />
+                <Route path='/advice' element={<Advice />} />
+                <Route path='/' element={<Business />} />
                 <Route path='/fiction' element={<Fiction />} />
             </Routes>
         </div >

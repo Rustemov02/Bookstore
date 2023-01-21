@@ -34,7 +34,7 @@ export default class Bestselling extends Component {
                     {/* Card Item */}
 
                     {data.fiction.map((item, index) => (
-                        <div className='hoverest'>
+                        <div key={index} className='hoverest'>
 
 
                             <div style={{ display: 'flex', justifyContent: 'center' }}>
