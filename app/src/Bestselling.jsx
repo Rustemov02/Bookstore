@@ -33,7 +33,7 @@ export default class Bestselling extends Component {
                 <Slider style={{padding: '20px'  , display: 'flex', justifyContent: 'center' }} {...settings}>
                     {/* Card Item */}
 
-                    {data.fiction.map((item, index) => (
+                    {data.myData.map((item, index) => (
                         <div key={index} className='hoverest'>
 
 

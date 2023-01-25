@@ -1,304 +1,348 @@
 {
-    "fiction": [
+    "myData" : [
         {
+            "type" : "fiction",
             "id": 0,
             "title": "IT STARTS WITH US",
             "author": "Colleen Hoover",
             "book_image": "https://storage.googleapis.com/du-prd/books/images/9781668001226.jpg"
         },
         {
+            "type" : "fiction",
             "id": 1,
             "title": "LESSONS IN CHEMISTRY",
             "author": "Bonnie Garmus",
             "book_image": "https://storage.googleapis.com/du-prd/books/images/9780385547345.jpg"
         },
         {
+            "type" : "fiction",
             "id": 2,
             "title": "WITHOUT A TRACE",
             "author": "Danielle Steel",
             "book_image": "https://storage.googleapis.com/du-prd/books/images/9781984821867.jpg"
         },
         {
+            "type" : "fiction",
             "id": 3,
             "title": "THE SEVEN HUSBANDS OF EVELYN HUGO",
             "author": "Taylor Jenkins Reid",
             "book_image": "https://storage.googleapis.com/du-prd/books/images/9781501161933.jpg"
         },
         {
+            "type" : "fiction",
             "id": 4,
             "title": "THE HOUSE IN THE PINES",
             "author": "Ana Reyes",
             "book_image": "https://storage.googleapis.com/du-prd/books/images/9780593186718.jpg"
         },
         {
+            "type" : "fiction",
             "id": 5,
             "title": "THE SILENT PATIENT",
             "author": "Alex Michaelides",
             "book_image": "https://storage.googleapis.com/du-prd/books/images/9781250301697.jpg"
         },
         {
+            "type" : "fiction",
             "id": 6,
             "title": "DEMON COPPERHEAD",
             "author": "Barbara Kingsolver",
             "book_image": "https://storage.googleapis.com/du-prd/books/images/9780063251922.jpg"
         },
         {
+            "type" : "fiction",
             "id": 7,
             "title": "LOATHE TO LOVE YOU",
             "author": "Ali Hazelwood",
             "book_image": "https://storage.googleapis.com/du-prd/books/images/9780593437803.jpg"
-        }
-    ],
-    "advice": [
+        },
         {
+            "type" : "advice",
             "title": "ATOMIC HABITS",
             "author": "James Clear",
             "book_image": "https://storage.googleapis.com/du-prd/books/images/9780735211292.jpg"
         },
         {
+            "type" : "advice",
             "title": "THE BOY, THE MOLE, THE FOX AND THE HORSE",
             "author": "Charlie Mackesy",
             "book_image": "https://storage.googleapis.com/du-prd/books/images/9780062976581.jpg"
         },
         {
+            "type" : "advice",
             "title": "NEVER FINISHED",
             "author": "David Goggins",
             "book_image": "https://storage.googleapis.com/du-prd/books/images/9781544534077.jpg"
         },
         {
+            "type" : "advice",
             "title": "GO-TO DINNERS",
             "author": "Ina Garten",
             "book_image": "https://storage.googleapis.com/du-prd/books/images/9781984822789.jpg"
         },
         {
+            "type" : "advice",
             "title": "FAITH STILL MOVES MOUNTAINS",
             "author": "Harris Faulkner",
             "book_image": "https://storage.googleapis.com/du-prd/books/images/9780063225930.jpg"
         },
         {
+            "type" : "advice",
             "title": "ATLAS OF THE HEART",
             "author": "Brené Brown",
             "book_image": "https://storage.googleapis.com/du-prd/books/images/9780399592553.jpg"
         },
         {
+            "type" : "advice",
             "title": "CAN'T HURT ME",
             "author": "David Goggins",
             "book_image": "https://storage.googleapis.com/du-prd/books/images/9781544512280.jpg"
         },
         {
+            "type" : "advice",
             "title": "LIGHTER",
             "author": "Yung Pueblo",
             "book_image": "https://storage.googleapis.com/du-prd/books/images/9780593233177.jpg"
-        }
-    ],
-    "business": [
+        },
         {
+            "type" : "business",   
             "title": "CHIP WAR",
             "author": "Chris Miller",
             "book_image": "https://storage.googleapis.com/du-prd/books/images/9781982172008.jpg"
         },
         {
+            "type" : "business", 
             "title": "DARE TO LEAD",
             "author": "Brené Brown",
             "book_image": "https://storage.googleapis.com/du-prd/books/images/9780399592522.jpg"
         },
         {
+            "type" : "business", 
             "title": "EXTREME OWNERSHIP",
             "author": "Jocko Willink and Leif Babin",
             "book_image": "https://storage.googleapis.com/du-prd/books/images/9781466874961.jpg"
         },
         {
+            "type" : "business", 
             "title": "FINANCIAL FEMINIST",
             "author": "Tori Dunlap",
             "book_image": "https://storage.googleapis.com/du-prd/books/images/9780063260269.jpg"
         },
         {
+            "type" : "business", 
             "title": "THINKING, FAST AND SLOW",
             "author": "Daniel Kahneman",
             "book_image": "https://storage.googleapis.com/du-prd/books/images/9781429969352.jpg"
         },
         {
+            "type" : "business", 
             "title": "THE BOOK OF BOUNDARIES",
             "author": "Melissa Urban",
             "book_image": "https://storage.googleapis.com/du-prd/books/images/9780593448700.jpg"
         },
         {
+            "type" : "business", 
             "title": "OUTLIERS",
             "author": "Malcolm Gladwell",
             "book_image": "https://storage.googleapis.com/du-prd/books/images/9780316017930.jpg"
         },
         {
+            "type" : "business", 
             "title": "EMPIRE OF PAIN",
             "author": "Patrick Radden Keefe",
             "book_image": "https://storage.googleapis.com/du-prd/books/images/9780385545686.jpg"
-        }
-    ],
-    "romance": [
+        },
         {
+            "type" : "romance", 
             "title": "ATOMIC HABITS",
             "author": "James Clear",
             "book_image": "https://storage.googleapis.com/du-prd/books/images/9780735211292.jpg"
         },
         {
+            "type" : "romance",
             "title": "THE BOY, THE MOLE, THE FOX AND THE HORSE",
             "author": "Charlie Mackesy",
             "book_image": "https://storage.googleapis.com/du-prd/books/images/9780062976581.jpg"
         },
         {
+            "type" : "romance",
             "title": "NEVER FINISHED",
             "author": "David Goggins",
             "book_image": "https://storage.googleapis.com/du-prd/books/images/9781544534077.jpg"
         },
         {
+            "type" : "romance",
             "title": "GO-TO DINNERS",
             "author": "Ina Garten",
             "book_image": "https://storage.googleapis.com/du-prd/books/images/9781984822789.jpg"
         },
         {
+            "type" : "romance",
             "title": "FAITH STILL MOVES MOUNTAINS",
             "author": "Harris Faulkner",
             "book_image": "https://storage.googleapis.com/du-prd/books/images/9780063225930.jpg"
         },
         {
+            "type" : "romance",
             "title": "ATLAS OF THE HEART",
             "author": "Brené Brown",
             "book_image": "https://storage.googleapis.com/du-prd/books/images/9780399592553.jpg"
         },
         {
+            "type" : "romance",
             "title": "CAN'T HURT ME",
             "author": "David Goggins",
             "book_image": "https://storage.googleapis.com/du-prd/books/images/9781544512280.jpg"
         },
         {
+            "type" : "romance",
             "title": "LIGHTER",
             "author": "Yung Pueblo",
             "book_image": "https://storage.googleapis.com/du-prd/books/images/9780593233177.jpg"
-        }
-    ],
-    "onSale": [
+        }, 
         {
+            "type" : "on-sale",
             "id": 7,
             "title": "LOATHE TO LOVE YOU",
             "author": "Ali Hazelwood",
             "book_image": "https://storage.googleapis.com/du-prd/books/images/9780593437803.jpg"
         },
         {
+            "type" : "on-sale",
             "id": 2,
             "title": "WITHOUT A TRACE",
             "author": "Danielle Steel",
             "book_image": "https://storage.googleapis.com/du-prd/books/images/9781984821867.jpg"
         },
         {
+            "type" : "on-sale",
             "title": "NEVER FINISHED",
             "author": "David Goggins",
             "book_image": "https://storage.googleapis.com/du-prd/books/images/9781544534077.jpg"
         },
         {
+            "type" : "on-sale",
             "title": "GO-TO DINNERS",
             "author": "Ina Garten",
             "book_image": "https://storage.googleapis.com/du-prd/books/images/9781984822789.jpg"
         },
         {
+            "type" : "on-sale",
             "title": "NEVER FINISHED",
             "author": "David Goggins",
             "book_image": "https://storage.googleapis.com/du-prd/books/images/9781544534077.jpg"
         },
         {
+            "type" : "on-sale",
             "title": "ATLAS OF THE HEART",
             "author": "Brené Brown",
             "book_image": "https://storage.googleapis.com/du-prd/books/images/9780399592553.jpg"
         },
         {
+            "type" : "on-sale",
             "title": "ATLAS OF THE HEART",
             "author": "Brené Brown",
             "book_image": "https://storage.googleapis.com/du-prd/books/images/9780399592553.jpg"
         },
         {
-            "title": "CAN'T HURT ME",
-            "author": "David Goggins",
-            "book_image": "https://storage.googleapis.com/du-prd/books/images/9781544512280.jpg"
-        }
-    ],
-    "featured": [
-        {
+            "type" : "on-sale",
             "title": "CAN'T HURT ME",
             "author": "David Goggins",
             "book_image": "https://storage.googleapis.com/du-prd/books/images/9781544512280.jpg"
         },
         {
+            "type" : "featured",
+            "title": "CAN'T HURT ME",
+            "author": "David Goggins",
+            "book_image": "https://storage.googleapis.com/du-prd/books/images/9781544512280.jpg"
+        },
+        {
+            "type" : "featured",
             "title": "LIGHTER",
             "author": "Yung Pueblo",
             "book_image": "https://storage.googleapis.com/du-prd/books/images/9780593233177.jpg"
         },
         {
+            "type" : "featured",
             "title": "FAITH STILL MOVES MOUNTAINS",
             "author": "Harris Faulkner",
             "book_image": "https://storage.googleapis.com/du-prd/books/images/9780063225930.jpg"
         },
         {
+            "type" : "featured",
             "title": "CAN'T HURT ME",
             "author": "David Goggins",
             "book_image": "https://storage.googleapis.com/du-prd/books/images/9781544512280.jpg"
         },
         {
+            "type" : "featured",
             "title": "LIGHTER",
             "author": "Yung Pueblo",
             "book_image": "https://storage.googleapis.com/du-prd/books/images/9780593233177.jpg"
         },
         {
+            "type" : "featured",
             "id": 4,
             "title": "THE HOUSE IN THE PINES",
             "author": "Ana Reyes",
             "book_image": "https://storage.googleapis.com/du-prd/books/images/9780593186718.jpg"
         },
         {
+            "type" : "featured",
             "id": 5,
             "title": "THE SILENT PATIENT",
             "author": "Alex Michaelides",
             "book_image": "https://storage.googleapis.com/du-prd/books/images/9781250301697.jpg"
         },
         {
+            "type" : "featured",
             "id": 7,
             "title": "LOATHE TO LOVE YOU",
             "author": "Ali Hazelwood",
             "book_image": "https://storage.googleapis.com/du-prd/books/images/9780593437803.jpg"
-        }
-    ],
-    "most-viewed": [
+        },
         {
+            "type" : "most-viewed",
             "title": "EXTREME OWNERSHIP",
             "author": "Jocko Willink and Leif Babin",
             "book_image": "https://storage.googleapis.com/du-prd/books/images/9781466874961.jpg"
         },
         {
+            "type" : "most-viewed",
             "title": "FINANCIAL FEMINIST",
             "author": "Tori Dunlap",
             "book_image": "https://storage.googleapis.com/du-prd/books/images/9780063260269.jpg"
         },
         {
+            "type" : "most-viewed",
             "title": "OUTLIERS",
             "author": "Malcolm Gladwell",
             "book_image": "https://storage.googleapis.com/du-prd/books/images/9780316017930.jpg"
         },
         {
+            "type" : "most-viewed",
             "title": "EMPIRE OF PAIN",
             "author": "Patrick Radden Keefe",
             "book_image": "https://storage.googleapis.com/du-prd/books/images/9780385545686.jpg"
         },
         {
+            "type" : "most-viewed",
             "title": "CHIP WAR",
             "author": "Chris Miller",
             "book_image": "https://storage.googleapis.com/du-prd/books/images/9781982172008.jpg"
         },
         {
+            "type" : "most-viewed",
             "title": "ATLAS OF THE HEART",
             "author": "Brené Brown",
             "book_image": "https://storage.googleapis.com/du-prd/books/images/9780399592553.jpg"
         },
         {
+            "type" : "most-viewed",
             "title": "CAN'T HURT ME",
             "author": "David Goggins",
             "book_image": "https://storage.googleapis.com/du-prd/books/images/9781544512280.jpg"
-        }
+        } 
     ]
 }
+

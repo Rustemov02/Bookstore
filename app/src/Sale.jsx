@@ -13,7 +13,7 @@ function Sale() {
         <> 
             <div style={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'center',backgroundColor : '#fdffcd' }}>
 
-                {data.onSale.map((item, index) => (
+                {/* {data.onSale.map((item, index) => (
                     <div key={index} style={{ width: '250px', padding: '10px', margin: '10px' }}>
 
 
@@ -40,7 +40,7 @@ function Sale() {
                         </div>
 
                     </div>
-                ))}
+                ))} */}
             </div>
         </>
     )
