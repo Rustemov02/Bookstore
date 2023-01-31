@@ -8,14 +8,14 @@ import "slick-carousel/slick/slick-theme.css";
 // import img3 from './images/img-3.jpg'
 
 import Header from './Header';
-import Slide from './List'; 
+import Slide from './List';
 import Bestselling from './Bestselling';
-import Categories from './Categories'; 
+import Categories from './Categories';
 import Feature from './Feature';
 import Release from './Releases';
+// import BasicButton from './learnMU'; 
+function App() {
 
-function App() { 
- 
   return (
     <div>
 
@@ -23,8 +23,9 @@ function App() {
       <Slide />
       <Categories />
       <Bestselling />
-      <Feature/>
-      <Release/>
+      <Feature />
+      <Release />
+      {/* <BasicButton/> */}
     </div>
   );
 }

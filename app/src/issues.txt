@@ -1,1 +1,6 @@
 1 => featured categories - card color
+2 => add authors  / avatar
+3 => books inform in click   
+4 => join page 
+5 => footer
+6 => refresh data.json

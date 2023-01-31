@@ -38,7 +38,7 @@ export default class Bestselling extends Component {
 
 
                             <div style={{ display: 'flex', justifyContent: 'center' }}>
-                                <Card sx={{ maxWidth: 270 }}>
+                                <Card sx={{ maxWidth: 270 , width : 230 }}>
                                     <CardMedia
                                         component="img"
                                         alt="null"

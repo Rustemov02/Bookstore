@@ -10,8 +10,8 @@ import Typography from '@mui/material/Typography';
 
 function Featured() {
     return (
-        <> 
-            <div style={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'center',backgroundColor : '#fdffcd' }}>
+        <>
+            <div style={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'center', backgroundColor: '#fdffcd' }}>
 
                 {data.featured.map((item, index) => (
                     <div key={index} style={{ width: '250px', padding: '10px', margin: '10px' }}>
