@@ -13,6 +13,7 @@ import Bestselling from './Bestselling';
 import Categories from './Categories';
 import Feature from './Feature';
 import Release from './Releases';
+import Authors from './Authors';
 // import BasicButton from './learnMU'; 
 function App() {
 
@@ -25,6 +26,7 @@ function App() {
       <Bestselling />
       <Feature />
       <Release />
+      <Authors/>
       {/* <BasicButton/> */}
     </div>
   );

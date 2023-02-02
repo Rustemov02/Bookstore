@@ -343,6 +343,44 @@
             "author": "David Goggins",
             "book_image": "https://storage.googleapis.com/du-prd/books/images/9781544512280.jpg"
         } 
+    ],
+    "authors" : [
+        {
+            "id" : 0,
+            "name" : "A G Riddle",
+            "published" : 3,
+            "img" : "https://bookworm.madrasthemes.com/wp-content/uploads/2020/09/4-1.jpg"
+        },
+        {
+            "id" : 1,
+            "name" : "Andre Aciman",
+            "published" : 2,
+            "img" : "https://bookworm.madrasthemes.com/wp-content/uploads/2020/09/12.jpg"
+        },
+        {
+            "id" : 2,
+            "name" : "Anna Burns",
+            "published" : 2,
+            "img" : "https://bookworm.madrasthemes.com/wp-content/uploads/2020/09/13.jpg"
+        },
+        {
+            "id" : 3,
+            "name" : "Barbara O'Neal",
+            "published" : 1,
+            "img" : "https://bookworm.madrasthemes.com/wp-content/uploads/2020/09/17.jpg"
+        },
+        {
+            "id" : 4,
+            "name" : "Blake Crouch",
+            "published" : 1,
+            "img" : "https://bookworm.madrasthemes.com/wp-content/uploads/2020/09/15.jpg"
+        },
+        {
+            "id" : 5,
+            "name" : "Stephen King",
+            "published" : 1,
+            "img" : "https://stephenking.com/images/press/stephenking-sm.jpg"
+        }
     ]
 }
 
