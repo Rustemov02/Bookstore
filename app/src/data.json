@@ -202,149 +202,153 @@
         }, 
         {
             "type" : "on-sale",
-            "id": 7,
+            "id": 0,
             "title": "LOATHE TO LOVE YOU",
             "author": "Ali Hazelwood",
             "book_image": "https://storage.googleapis.com/du-prd/books/images/9780593437803.jpg"
         },
         {
             "type" : "on-sale",
-            "id": 2,
+            "id": 1,
             "title": "WITHOUT A TRACE",
             "author": "Danielle Steel",
             "book_image": "https://storage.googleapis.com/du-prd/books/images/9781984821867.jpg"
         },
         {
             "type" : "on-sale",
+            "id": 2,
             "title": "NEVER FINISHED",
             "author": "David Goggins",
             "book_image": "https://storage.googleapis.com/du-prd/books/images/9781544534077.jpg"
         },
         {
             "type" : "on-sale",
+            "id": 3,
             "title": "GO-TO DINNERS",
             "author": "Ina Garten",
             "book_image": "https://storage.googleapis.com/du-prd/books/images/9781984822789.jpg"
         },
         {
             "type" : "on-sale",
+            "id": 4,
             "title": "NEVER FINISHED",
             "author": "David Goggins",
             "book_image": "https://storage.googleapis.com/du-prd/books/images/9781544534077.jpg"
         },
         {
             "type" : "on-sale",
+            "id": 5,
             "title": "ATLAS OF THE HEART",
             "author": "Brené Brown",
             "book_image": "https://storage.googleapis.com/du-prd/books/images/9780399592553.jpg"
         },
         {
             "type" : "on-sale",
+            "id": 6,
             "title": "ATLAS OF THE HEART",
             "author": "Brené Brown",
             "book_image": "https://storage.googleapis.com/du-prd/books/images/9780399592553.jpg"
         },
         {
             "type" : "on-sale",
+            "id": 7,
             "title": "CAN'T HURT ME",
             "author": "David Goggins",
             "book_image": "https://storage.googleapis.com/du-prd/books/images/9781544512280.jpg"
         },
         {
             "type" : "featured",
+            "id": 0,
             "title": "CAN'T HURT ME",
             "author": "David Goggins",
             "book_image": "https://storage.googleapis.com/du-prd/books/images/9781544512280.jpg"
         },
         {
             "type" : "featured",
+            "id": 1,
             "title": "LIGHTER",
             "author": "Yung Pueblo",
             "book_image": "https://storage.googleapis.com/du-prd/books/images/9780593233177.jpg"
         },
         {
             "type" : "featured",
+            "id": 2,
             "title": "FAITH STILL MOVES MOUNTAINS",
             "author": "Harris Faulkner",
             "book_image": "https://storage.googleapis.com/du-prd/books/images/9780063225930.jpg"
-        },
+        },  
         {
             "type" : "featured",
-            "title": "CAN'T HURT ME",
-            "author": "David Goggins",
-            "book_image": "https://storage.googleapis.com/du-prd/books/images/9781544512280.jpg"
-        },
-        {
-            "type" : "featured",
-            "title": "LIGHTER",
-            "author": "Yung Pueblo",
-            "book_image": "https://storage.googleapis.com/du-prd/books/images/9780593233177.jpg"
-        },
-        {
-            "type" : "featured",
-            "id": 4,
+            "id": 3,
             "title": "THE HOUSE IN THE PINES",
             "author": "Ana Reyes",
             "book_image": "https://storage.googleapis.com/du-prd/books/images/9780593186718.jpg"
         },
         {
             "type" : "featured",
-            "id": 5,
+            "id": 4,
             "title": "THE SILENT PATIENT",
             "author": "Alex Michaelides",
             "book_image": "https://storage.googleapis.com/du-prd/books/images/9781250301697.jpg"
         },
         {
             "type" : "featured",
-            "id": 7,
+            "id": 5,
             "title": "LOATHE TO LOVE YOU",
             "author": "Ali Hazelwood",
             "book_image": "https://storage.googleapis.com/du-prd/books/images/9780593437803.jpg"
         },
         {
             "type" : "most-viewed",
+            "id": 0,
             "title": "EXTREME OWNERSHIP",
             "author": "Jocko Willink and Leif Babin",
             "book_image": "https://storage.googleapis.com/du-prd/books/images/9781466874961.jpg"
         },
         {
             "type" : "most-viewed",
+            "id": 1,
             "title": "FINANCIAL FEMINIST",
             "author": "Tori Dunlap",
             "book_image": "https://storage.googleapis.com/du-prd/books/images/9780063260269.jpg"
         },
         {
             "type" : "most-viewed",
+            "id": 2,
             "title": "OUTLIERS",
             "author": "Malcolm Gladwell",
             "book_image": "https://storage.googleapis.com/du-prd/books/images/9780316017930.jpg"
         },
         {
             "type" : "most-viewed",
+            "id": 3,
             "title": "EMPIRE OF PAIN",
             "author": "Patrick Radden Keefe",
             "book_image": "https://storage.googleapis.com/du-prd/books/images/9780385545686.jpg"
         },
         {
             "type" : "most-viewed",
+            "id": 4,
             "title": "CHIP WAR",
             "author": "Chris Miller",
             "book_image": "https://storage.googleapis.com/du-prd/books/images/9781982172008.jpg"
         },
         {
             "type" : "most-viewed",
+            "id": 5,
             "title": "ATLAS OF THE HEART",
             "author": "Brené Brown",
             "book_image": "https://storage.googleapis.com/du-prd/books/images/9780399592553.jpg"
         },
         {
             "type" : "most-viewed",
+            "id": 6,
             "title": "CAN'T HURT ME",
             "author": "David Goggins",
             "book_image": "https://storage.googleapis.com/du-prd/books/images/9781544512280.jpg"
         } 
     ],
-    "authors" : [
+    "authors" : [   
         {
             "id" : 0,
             "name" : "A G Riddle",

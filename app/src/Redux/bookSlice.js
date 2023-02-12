@@ -17,27 +17,21 @@ export const bookSlice = createSlice({
     name: 'book',
     initialState: {
         data: [],
-        bestSelling: []
+        categories : 'on-sale' 
     },
     reducers: {
-        // getBestSelling: (state, { payload }) => {
-        //     state.bestSelling = payload
-        //     console.log(state.bestSelling)
-        //     console.log('bestselling fulfilled !')
-        // }
+        getCategories : (state , {payload}) => { 
+            state.categories = payload 
+        }
     },
     extraReducers: {
         // fulfilled  , pending , rejected
+
         [fetchBooks.fulfilled]: (state, { payload }) => {
-            // state.data = payload
-            //    console.log(state.data)
-            // console.log(payload[0])
-            // console.log(payload[0].title) 
-            // console.log(payload[0].author) 
-            // console.log(payload[0].book_image) 
+            
         }
     }
 })
 
-export const { getBestSelling } = bookSlice.actions
+export const { getCategories } = bookSlice.actions
 export default bookSlice.reducer 

@@ -1,32 +1,26 @@
 import React from "react";
 import { useState } from "react";
 import data from './data.json'
-// import Advice from "./Advice";
-// import Business from "./Business";
-// import Fiction from './Fiction'
-// import Romance from "./Romance";
-
+import './Feature.css'
 import Card from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
-import { CardActionArea, Paper, Box, createTheme, ThemeProvider, CssBaseline, Link, Chip } from "@mui/material";
+import { CardActionArea, Paper, Box, createTheme, ThemeProvider, CssBaseline, Chip, IconButton } from "@mui/material";
 import releasesImg from '././images/releases-book.jpg'
-// import img1 from '././images/img-1.jpg'
+import { Link } from "react-router-dom";
 
 import './Release.css'
 import { red, grey } from '@mui/material/colors'
 import { Stack } from "@mui/system";
 
 function Release() {
-    const [typeName, setTypeName] = useState('fiction')
+    const [typeName, setTypeName] = useState('business')
+    const categories = ['Business', 'Romance', 'Most-Viewed']
+    const [active, setActive] = useState('Business')
 
-    const getTypeName = (event) => {
-        setTypeName(event.target.innerText.toLowerCase())
-    }
-    
     const theme = createTheme({
         palette: {
             mode: 'light',
@@ -46,43 +40,73 @@ function Release() {
                 fontSize: '16px',
                 paddingTop: '10px'
             }
-        }, 
-
+        }
     })
-
-
+    const boxStyle = {
+        border: 1,
+        borderColor: 'gray',
+        margin: 1,
+        padding: 0.5,
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+        width: 170
+    }
+    const TextBoxStyle = {
+        width: "100%",
+        display: 'flex',
+        justifyContent: 'center',
+        flexDirection: 'column',
+        textAlign: 'center',
+        px: 1, py: 1
+    }
+    const typography = {
+        color: 'red',
+        height: 'auto',
+        width: 'auto',
+        marginBottom: 19,
+        textAlign: 'start',
+        textOverflow: 'ellipsis',
+        overflow: 'hidden',
+        whiteSpace: 'nowrap'
+    }
 
     return (
-        <Stack border={2} p={3}>
-            <ThemeProvider theme={theme}    >
+        <Stack padding={10} >
+
+            <ThemeProvider theme={theme}>
                 <CssBaseline />
-                {/* HEADER */}
-                {/* className="d-flex flex-row justify-content-between p-2 align-items-center " */}
-                <Stack direction="row" justifyContent='space-between' alignItems='center' sx={{ p: 2 }}>
-                    <h2>New Releases</h2>
-                    {/* className="mt-2 d-flex flex-row align-items-center justify-content-center" */}
+
+                <Stack direction="row" justifyContent='space-between' alignItems='center' padding={2}>
+                    <Typography variant="h4">New Releases</Typography>
+
                     <Stack spacing={2} direction="row">
-                        {/* <p onClick={getTypeName}>Business</p>
-                    <p onClick={getTypeName}>Romance</p>
-                    <p onClick={getTypeName}>Most-viewed</p> */}
-                        <Chip onClick={getTypeName} label="Business" size="medium"  variant="myVariant"/>
-                        <Chip onClick={getTypeName} label="Romance" size="medium" variant="" />
-                        <Chip onClick={getTypeName} label="Most-Viewed" size="medium" variant="" />
+                        {categories.map((item, index) => (
+                            <Link className={`${active == item && "active"}`}
+                                key={index} style={{ textDecoration: 'none', color: 'black', paddingBottom: 10 }}
+                                onClick={(event) => {
+                                    setTypeName(event.target.innerText.toLowerCase())
+                                    setActive(item)
+                                }}
+                            >{item}</Link>
+                        ))}
                     </Stack>
                 </Stack>
 
-                {/* BODY  */}
-                <Stack direction='row'>
 
-                    <Stack direction='row' alignItems='center' sx={{ px: 3, py: 2, border: 1, borderColor: 'customGreyColor.main' }}>
-                        <Card raised={true} variant='contained' sx={{ width: 430 }}>
+
+                {/* BODY  */}
+                <Stack direction='row' alignItems="center" justifyContent='space-around' border={1}>
+                    {/* , border: 1, borderColor: 'customGreyColor.main' */}
+                    {/* First */}     <Stack direction='row' alignItems='center' justifyContent='center' sx={{ px: 3, py: 2 }}>
+                        <Card variant='contained' sx={{ width: 430 }}>
                             <CardActionArea>
-                                <Box sx={{}}>
+                                <Box>
                                     <CardMedia
                                         component="img"
                                         height="330"
                                         image={releasesImg}
-                                        alt="green iguana"
+                                        alt="relasesImg"
                                     />
                                 </Box>
                                 <CardContent>
@@ -105,55 +129,29 @@ function Release() {
                         </Card>
                     </Stack>
 
-                    {/* className="p-2 m-1 border d-flex flex-row justify-content-between align-items-center" */}
-                    <Stack direction="row" justifyContent='space-between' flexWrap='wrap' sx={{ gap: 2, px: 1 }}  >
+                    {/* Second */}    <Stack direction="row" justifyContent='' flexWrap='wrap' sx={{ gap: 2, px: 1 }}  >
 
                         {data.myData.filter(item => item.type === `${typeName}`).map((item, index) => (
-                            <Stack key={index} sx={{ width: 220, height: 400 }}>
+                            <Box component='div' sx={boxStyle} key={index}>
+                                <img src={item.book_image} alt='releasesImg' style={{ width: 'auto', height: 170 }} />
+
+                                <Box component='div' sx={TextBoxStyle}>
+                                    <Link to={`/${item.id}`} style={{ textDecoration: 'none' }}>   <Typography variant="body2" style={{ textAlign: 'start' }} color='text.secondary'>{item.author}</Typography>
+                                        <Typography variant="subtitle1" style={typography}>{item.title}</Typography>
+                                    </Link>
+                                    <Button size="small" sx={{ width: 110, display: 'flex', textItems: "flex-start" }} >Add To Cart </Button>
+                                </Box>
 
 
-                                <Stack sx={{ display: 'flex', width: 200, height: 400, }}>
-                                    <Card>
-                                        <CardMedia
-                                            component="img"
-                                            alt="null"
-                                            height="230"
-                                            image={item.book_image}
-                                        />
-                                        {/* display : 'flex' ,flexDirection : 'column' , justifyContent : 'center' */}
-                                        <CardContent >
-                                            <Typography variant="body2" color="text.secondary" sx={{ textOverflow: 'ellipsis', whiteSpace: "nowrap", overflow: "hidden" }} >
-                                                {item.author}
-                                            </Typography>
-                                            <Typography gutterBottom variant="myVariant" component="div" sx={{ color: 'red', height: '50px', marginBottom: '30px' }}>
-                                                {item.title}
-                                            </Typography>
-                                        </CardContent>
-                                        <CardActions >
-                                            <Button variant="contained" sx={{ mt: -1 }} size="small">Add To Cart</Button>
-                                        </CardActions>
-                                    </Card>
-                                </Stack>
+                            </Box>
 
-                            </Stack>
+
+
                         ))}
 
                     </Stack>
 
                 </Stack>
-
-
-
-
-
-                {/* <div className="p-2 m-1 border d-flex flex-row justify-content-between align-items-center">
-                <h2 >New Releases</h2>
-                {data.myData.filter(item => item.type === `${typeName}`).map((item, index) => (
-                    <div key={index}>
-                        {item.author}
-                    </div>
-                ))}
-            </div> */}
 
             </ThemeProvider>
         </Stack>

@@ -1,5 +1,6 @@
 import { Dropdown, Button, Card } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css'
+import { Stack } from '@mui/material';
 
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -8,27 +9,22 @@ import "slick-carousel/slick/slick-theme.css";
 // import img3 from './images/img-3.jpg'
 
 import Header from './Header';
-import Slide from './List';
 import Bestselling from './Bestselling';
-import Categories from './Categories';
-import Feature from './Feature';
-import Release from './Releases';
-import Authors from './Authors';
+// import Slide from './List';
+// import Bestselling from './Bestselling';
+// import Feature from './Feature';
+// import Release from './Releases';
+// import Authors from './Authors';
+// import CustomArrows from './learnMU';
+// import Newsletter from './Newsletter';
+// import Footer from './Footer';
 // import BasicButton from './learnMU'; 
 function App() {
-
+  
   return (
-    <div>
-
-      <Header />
-      <Slide />
-      <Categories />
-      <Bestselling />
-      <Feature />
-      <Release />
-      <Authors/>
-      {/* <BasicButton/> */}
-    </div>
+    <Stack   direction='column'>
+      <Header/>
+    </Stack>  
   );
 }
 

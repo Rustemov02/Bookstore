@@ -15,61 +15,92 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
-
-export default class Bestselling extends Component {
-    render() {
-        var settings = {
-            dots: true,
-            infinite: true,
-            slidesToShow: 4,
-            slidesToScroll: 2,
-            autoplay: true,
-            autoplaySpeed: 2000,
-            pauseOnHover: true
-        };
-        return (
-            <div className='mt-5 p-4' style={{ border: 'solid black 1px',backgroundColor : '#385170' }}>
-                <h2 className='p-2 m-1 white'>Best Selling Books</h2>
-                <Slider style={{padding: '20px'  , display: 'flex', justifyContent: 'center' }} {...settings}>
-                    {/* Card Item */}
-
-                    {data.myData.map((item, index) => (
-                        <div key={index} className='hoverest'>
+import { Link } from 'react-router-dom';
+import { Stack } from '@mui/material';
+import { borderColor } from '@mui/system';
 
 
-                            <div style={{ display: 'flex', justifyContent: 'center' }}>
-                                <Card sx={{ maxWidth: 270 , width : 230 }}>
-                                    <CardMedia
-                                        component="img"
-                                        alt="null"
-                                        height="170" 
-                                        image={item.book_image}
-                                    />
-                                    <CardContent style={{}}>
-                                        <Typography gutterBottom variant="h6" component="div" style={{ color: 'red', height: '50px', marginBottom: '5px' }}>
+function SampleNextArrow(props) {
+    const { className, style, onClick } = props;
+    return (
+      <div
+        className={className}
+        style={{ ...style, display: "flex",alignItems : 'center' , justifyContent : "center" , background: "#c5cae9" , color : 'black',height : 50 ,width : 45,fontSize : 120, padding : 10  }}
+        onClick={onClick}
+      />
+    );
+  }
+  
+  function SamplePrevArrow(props) {
+    const { className, style, onClick } = props;
+    return (
+      <div
+        className={className}
+        style={{ ...style, display: "flex",alignItems : 'center' , justifyContent : "center" , background: "#c5cae9" , color : 'black',height : 50 ,width : 45,fontSize : 120, padding : 10  }}
+        onClick={onClick}
+      />
+    );
+  }
+
+
+export default function Bestselling() {
+    var settings = {
+        dots: false,
+        infinite: true,
+        slidesToShow: 5,
+        slidesToScroll: 2,
+        // autoplay: true,
+        // autoplaySpeed: 2000,
+        // pauseOnHover: false, 
+        nextArrow: <SampleNextArrow />,
+        prevArrow: <SamplePrevArrow />
+    };
+    return (
+        <Stack padding={10}>
+            <Typography variant='h4' sx={{ paddingBottom: 5 }}>Best Selling Books</Typography>
+
+            <Slider  {...settings} style={{ padding: '20px'}}>
+
+
+                {data.myData.map((item, index) => (
+                    <Stack key={index}  p={3} >
+
+                        <Stack display='flex' flexDirection='column' alignItems='center' justifyContent="center">
+                            <Card sx={{ width: 170  }}>
+                                <CardMedia
+                                    component="img"
+                                    alt="null"
+                                    height="170"
+                                    image={item.book_image}
+                                />
+                                <CardContent >
+                                    <Link to={`/${item.id}`} style={{ textDecoration: 'none' }}>
+                                        <Typography gutterBottom variant="h6" component="div" style={{ color: 'red', height: 25, marginBottom: '5px', textOverflow: 'ellipsis', overflow: 'hidden', whiteSpace: 'nowrap' }}>
                                             {item.title}
                                         </Typography>
-                                        <Typography variant="body2" color="text.secondary" style={{ marginTop: '20px' }} >
+
+                                        <Typography variant="body2" color="text.secondary" style={{ marginTop: '20px', textOverflow: 'ellipsis', overflow: 'hidden', whiteSpace: 'nowrap' }} >
                                             {item.author}
                                         </Typography>
-                                    </CardContent>
-                                    <CardActions>
-                                        <Button size="small">Add To Cart</Button>
-                                    </CardActions>
-                                </Card>
-                            </div>
+                                    </Link>
+                                </CardContent>
+                                <CardActions>
+                                    <Button size="small">Add To Cart</Button>
+                                </CardActions>
+                            </Card>
+                        </Stack>
 
-                        </div>
-                    ))}
+                    </Stack>
+                ))}
 
 
 
 
-                </Slider>
-            </div>
-        );
-    }
+            </Slider>
+        </Stack>
+    );
 }
+
 
 {/* <div key={key} className="d-flex flex-column border" >
 
