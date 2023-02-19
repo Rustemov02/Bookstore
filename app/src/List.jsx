@@ -6,8 +6,8 @@ import Slider from "react-slick"
 import firstImg from './images/firstImg.jpg'
 import secondImg from './images/secondImg.jpg'
 import thirdImg from './images/thirdImg.jpg'
-
-import { Stack, Typography, Box, Button } from '@mui/material' 
+import Typical from 'react-typical'
+import { Stack, Typography, Box, Button } from '@mui/material'
 
 
 function CustomSlide() {
@@ -41,8 +41,15 @@ function Item(props) {
     return (
         <Stack direction='row'>
             <Box component="div" sx={{ px: 5, width: '50%', display: "flex", flexDirection: 'column', alignItems: "flex-start", justifyContent: 'center', gap: 3 }}>
+
                 <Typography variant="" color='primary'>THE  BOOKWORM EDITORS</Typography>
-                <Typography variant="h2">Featured Books of the  <Box component='span'>Februrary</Box></Typography>
+                <Typography variant="h2">
+                    <Typical
+                        steps={['Trending Books', 4000, 'Featured Books of the  Februrary', 500]}
+                        loop={Infinity}
+                        wrapper="d"
+                    />
+                     </Typography>
                 <Button variant="contained">See More</Button>
             </Box>
             <img style={customStyle} src={img} alt="" />
@@ -56,13 +63,13 @@ function Slide() {
         slidesToShow: 1,
         slidesToScroll: 1,
         autoplay: true,
-        autoplaySpeed: 2000,
+        autoplaySpeed: 4000,
         pauseOnHover: false,
         nextArrow: <Arrows />,
         prevArrow: <Arrows />
     }
 
-    return ( 
+    return (
         <div style={{ background: '#ffebee', margin: 'auto', width: '100%' }}>
             <Slider {...settings}>
                 <Stack>

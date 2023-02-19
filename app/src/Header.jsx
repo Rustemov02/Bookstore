@@ -13,8 +13,8 @@ import MenuIcon from '@mui/icons-material/Menu';
 import SearchIcon from '@mui/icons-material/Search';
 import { red } from '@mui/material/colors';
 
- 
-import Drawer from '@mui/material/Drawer'; 
+
+import Drawer from '@mui/material/Drawer';
 import List from '@mui/material/List';
 import Divider from '@mui/material/Divider';
 import ListItem from '@mui/material/ListItem';
@@ -106,7 +106,7 @@ function Header() {
 
 
 
-  const [state, setState] = React.useState({ 
+  const [state, setState] = React.useState({
     right: false,
   });
 
@@ -126,7 +126,7 @@ function Header() {
       onKeyDown={toggleDrawer(anchor, false)}
     >
       <List>
-        {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
+        {['Home', 'Categories', 'Shop', 'Pages'].map((text, index) => (
           <ListItem key={text} disablePadding>
             <ListItemButton>
               <ListItemIcon>
@@ -161,24 +161,15 @@ function Header() {
 
 
 
-
-            {/* <IconButton
-              size="large"
-              edge="start"
-              color="inherit"
-              aria-label="open drawer"
-              sx={{ mr: 2 }}
-            >
-              <MenuIcon />
-            </IconButton> */}
-
-
-            <div>
-              {['left', 'right', 'top', 'bottom'].map((anchor) => (
+            <Stack >
+              {['left'].map((anchor) => (
                 <React.Fragment key={anchor}>
-                  <Button onClick={toggleDrawer(anchor, true)}>{anchor}</Button>
+                  {/* <Button onClick={toggleDrawer(anchor, true)}>{anchor}</Button> */}
+                  <IconButton>
+                    <MenuIcon onClick={toggleDrawer(anchor, true)} />
+                  </IconButton>
                   <Drawer
-                    anchor={anchor}
+                    anchor='left'
                     open={state[anchor]}
                     onClose={toggleDrawer(anchor, false)}
                   >
@@ -186,7 +177,7 @@ function Header() {
                   </Drawer>
                 </React.Fragment>
               ))}
-            </div>
+            </Stack>
 
 
 
@@ -214,8 +205,8 @@ function Header() {
               variant="h6"
               noWrap
               component="div"
-              sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}
-            >
+              sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' }  , height : 45 ,alignItems : 'center' , px : 3}}
+          >
               <img src={svgElement} alt="" />
             </Typography>
 
