@@ -1,80 +1,86 @@
 import React, { Component } from 'react';
 import Slider from 'react-slick'
-
-import './bestSelling.css'
-import data from './data.json'
-
-import img1 from './images/img-1.jpg'
-import img2 from './images/img-2.jpg'
-import img3 from './images/img-3.jpg'
-
-
 import Card from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
-import Typography from '@mui/material/Typography';
+import Typography, { typographyClasses } from '@mui/material/Typography';
 import { Link } from 'react-router-dom';
 import { Stack } from '@mui/material';
 import { borderColor } from '@mui/system';
+import img1 from './images/img-1.jpg'
+import img2 from './images/img-2.jpg'
+import img3 from './images/img-3.jpg'
+import data from './data.json'
+import './bestSelling.css'
 
+import { useDispatch, useSelector } from 'react-redux';
+import { fetchBooks, getBestSellingCategories, testerApi, dataTester } from './Redux/bookSlice';
 
 function SampleNextArrow(props) {
     const { className, style, onClick } = props;
     return (
-      <div
-        className={className}
-        style={{ ...style, display: "flex",alignItems : 'center' , justifyContent : "center" , background: "#c5cae9" , color : 'black',height : 50 ,width : 45,fontSize : 120, padding : 10  }}
-        onClick={onClick}
-      />
+        <div
+            className={className}
+            style={{ ...style, display: "flex", alignItems: 'center', justifyContent: "center", background: "#c5cae9", color: 'black', height: 50, width: 45, fontSize: 120, padding: 10 }}
+            onClick={onClick}
+        />
     );
-  }
-  
-  function SamplePrevArrow(props) {
+}
+
+function SamplePrevArrow(props) {
     const { className, style, onClick } = props;
     return (
-      <div
-        className={className}
-        style={{ ...style, display: "flex",alignItems : 'center' , justifyContent : "center" , background: "#c5cae9" , color : 'black',height : 50 ,width : 45,fontSize : 120, padding : 10  }}
-        onClick={onClick}
-      />
+        <div
+            className={className}
+            style={{ ...style, display: "flex", alignItems: 'center', justifyContent: "center", background: "#c5cae9", color: 'black', height: 50, width: 45, fontSize: 120, padding: 10 }}
+            onClick={onClick}
+        />
     );
-  }
+}
 
 
 export default function Bestselling() {
+    const dispatch = useDispatch()
+    const typeOfCategories = useSelector(state => state.books.generalCategories)
+    const dataBooks = useSelector(state => state.books.dataTester)
+    const bookName = "FAIRY TALE"
+
     var settings = {
         dots: false,
-        infinite: true,
-        slidesToShow: 5,
+        infinite: false,
+        slidesToShow: 6,
         slidesToScroll: 2,
-        // autoplay: true,
-        // autoplaySpeed: 2000,
-        // pauseOnHover: false, 
         nextArrow: <SampleNextArrow />,
         prevArrow: <SamplePrevArrow />
     };
     return (
-        <Stack padding={10}>
+        <Stack padding={7}>
             <Typography variant='h4' sx={{ paddingBottom: 5 }}>Best Selling Books</Typography>
+            {/* <Button onClick={()=>dispatch(fetchBooks())}>Test</Button> */}
+            <Slider  {...settings} style={{ padding: '20px' }}>
 
-            <Slider  {...settings} style={{ padding: '20px'}}>
-
-
-                {data.myData.map((item, index) => (
-                    <Stack key={index}  p={3} >
+                {data.bestSelling.map((item, index) => (
+                    <Stack key={index} p={3} >
 
                         <Stack display='flex' flexDirection='column' alignItems='center' justifyContent="center">
-                            <Card sx={{ width: 170  }}>
+                            <Card sx={{ width: 170 }}>
                                 <CardMedia
                                     component="img"
                                     alt="null"
                                     height="170"
                                     image={item.book_image}
                                 />
-                                <CardContent >
-                                    <Link to={`/${item.id}`} style={{ textDecoration: 'none' }}>
+                                <CardContent onClick={() => dispatch(fetchBooks(`${typeOfCategories}`))}>
+
+                                    <Link to={`/${item.id}`} style={{ textDecoration: 'none' }} onClick={() => {
+                                        const title = item.title
+                                        const author = item.author
+                                        const type = item.type
+                                        dispatch(getBestSellingCategories(title))
+
+                                    }}>
                                         <Typography gutterBottom variant="h6" component="div" style={{ color: 'red', height: 25, marginBottom: '5px', textOverflow: 'ellipsis', overflow: 'hidden', whiteSpace: 'nowrap' }}>
                                             {item.title}
                                         </Typography>
@@ -92,42 +98,7 @@ export default function Bestselling() {
 
                     </Stack>
                 ))}
-
-
-
-
             </Slider>
         </Stack>
     );
 }
-
-
-{/* <div key={key} className="d-flex flex-column border" >
-
-<div class="card-img" >
-    <img className='w-100' src={item.book_image} />
-</div>
-
-<div class="card-body p-3" >
-    <h1>{item.title}</h1>
-    <p class="">{item.author}</p>
-    <button type="button" class="w-50" style={{ fontSize: '25px' }}>{`& ${item.title.length}`}</button>
-</div>
-
-</div> */}
-
-
-{/* {data.fiction.map((item, key) => (
-                <div key={key} className="m-2 " style={{border : 'solid red 1px' ,width : '300px'}}>
-
-                    <div className="card-img m-auto " style={{width : '120px' , height : ''}} >
-                        <img className='m-auto ' src={item.book_image} style={{ height : '180px'}} />
-                    </div>
-
-                    <div className="card-body border border-warning d-flex flex-column justify-content-around" >
-                        <h4 className=''>{item.title}</h4>
-                        <p className="">{item.author}</p>
-                        <button type="button" className="w-50" style={{ fontSize: '15px' }}>{`& ${item.title.length}`}</button>
-                    </div>
-                </div>
-            ))} */}

@@ -20,21 +20,7 @@ export default function Newsletter() {
 
             }
         }
-    })
-
-
-
-    // const boxSX = {
-    //     boxShadow: 3,
-    //     width: 'fit-content',
-    //     color: "blue",
-    //     "&:hover": {
-    //         border: '1px solid red',
-    //         color: 'red',
-    //         backgroundColor: 'lightblue',
-    //         cursor: 'pointer'
-    //     }
-    // }
+    }) 
     const typographySx = {
         color: 'grey',
         cursor: 'pointer',
@@ -53,7 +39,7 @@ export default function Newsletter() {
 
 
     return (
-        <Stack sx={{ padding: '100px 0' }}>
+        <Stack sx={{ padding: '60px 0' }}>
             <ThemeProvider theme={theme}>
 
                 <Stack direction='column' alignItems='center'>

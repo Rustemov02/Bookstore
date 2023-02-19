@@ -30,40 +30,6 @@ function SamplePrevArrow(props) {
 
 export default function Authors() {
 
-    // const arrowStyle = {
-    //     background: "#039be5",
-    //     color: 'green',
-    //     display: 'flex',
-    //     alignItems: "center",
-    //     justifyContent: 'center',
-    //     padding: '6px 5px',
-    //     height: 50,
-    //     width: 50,
-
-    // }
-
-    // function SampleNextArrow(props) {
-    //     const { className, style, onClick } = props;
-    //     return (
-    //         <div
-    //             className={className}
-    //             style={{ ...arrowStyle, marginRight: 10 }}
-    //             onClick={onClick}
-    //         />
-
-    //     );
-    // }
-
-    // function SamplePrevArrow(props) {
-    //     const { className, style, onClick } = props;
-    //     return (
-    //         <div
-    //             className={className}
-    //             style={{ ...arrowStyle, marginLeft: 10 }}
-    //             onClick={onClick}
-    //         />
-    //     );
-    // }
 
     const settings = {
         dots: false,
@@ -76,7 +42,7 @@ export default function Authors() {
 
     return (
         // #ffebee
-        <Stack p={10} bgcolor=''>
+        <Stack p={8} borderBottom={1} borderColor='gray'>
             <Stack direction="row" justifyContent='space-between' alignItems='center' sx={{ p: 2 }}>
                 <h2>Favorites Authors</h2>
             </Stack>

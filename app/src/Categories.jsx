@@ -30,7 +30,7 @@ export default function Categories() {
 
 
     return ( 
-        <Stack padding={10} >
+        <Stack padding={7} >
             <ThemeProvider theme={theme}>
 
                 <Typography variant='h4' sx={{paddingBottom : 5}}>Featured Categories</Typography>

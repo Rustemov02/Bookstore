@@ -7,13 +7,13 @@ import { red } from '@mui/material/colors'
 import { Link } from "react-router-dom";
 
 import { useSelector, useDispatch } from 'react-redux'
-import { getCategories } from "./Redux/bookSlice";
+import { getFeatureCategories } from "./Redux/bookSlice";
 
 
 function Feature() {
 
     const dispatch = useDispatch()
-    const typeCategories = useSelector(state => state.books.categories)
+    const typeCategories = useSelector(state => state.books.FeatureCategories)
     const categories = ["On-Sale", "Featured", "Most-Viewed"]
     const [active, setActive] = useState('On-Sale')
 
@@ -49,14 +49,14 @@ function Feature() {
     }
     return (
 
-        <Stack padding={10} bgcolor="white">
+        <Stack padding={7} bgcolor="white">
 
             <Typography variant="h4" align="center">Featured Books</Typography>
             <Stack direction="row" spacing={5} sx={{ pb: 3, pt: 2, justifyContent: 'center' }}>
                 {categories.map((item, index) => (
                     <Link className={`${active == item && "active"}`} key={index} style={{ textDecoration: 'none', color: 'black', paddingBottom: 10 }} onClick={(event) => {
                         setActive(item)
-                        dispatch(getCategories(event.target.innerText.toLowerCase()))
+                        dispatch(getFeatureCategories(event.target.innerText.toLowerCase()))
                     }} >{item}</Link>
                 ))}
             </Stack>

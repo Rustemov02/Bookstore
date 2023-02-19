@@ -1,3 +1,4 @@
+import React from 'react';
 import { Dropdown, Button, Carousel, Card } from 'react-bootstrap';
 
 import { Stack, createTheme, ThemeProvider } from '@mui/material'
@@ -12,11 +13,26 @@ import MenuIcon from '@mui/icons-material/Menu';
 import SearchIcon from '@mui/icons-material/Search';
 import { red } from '@mui/material/colors';
 
+ 
+import Drawer from '@mui/material/Drawer'; 
+import List from '@mui/material/List';
+import Divider from '@mui/material/Divider';
+import ListItem from '@mui/material/ListItem';
+import ListItemButton from '@mui/material/ListItemButton';
+import ListItemIcon from '@mui/material/ListItemIcon';
+import ListItemText from '@mui/material/ListItemText';
+import InboxIcon from '@mui/icons-material/MoveToInbox';
+import MailIcon from '@mui/icons-material/Mail';
+
+
+
+
 
 import 'bootstrap/dist/css/bootstrap.min.css'
 import img1 from './images/img-1.jpg'
 import img2 from './images/img-2.jpg'
 import img3 from './images/img-3.jpg'
+import svgElement from './svgElement.svg'
 
 import { Link, NavLink, Route, Router, Routes } from 'react-router-dom'
 
@@ -55,17 +71,10 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
   color: 'inherit',
   '& .MuiInputBase-input': {
     padding: theme.spacing(1, 1, 1, 0),
-    // vertical padding + font size from searchIcon
     paddingLeft: `calc(1em + ${theme.spacing(4)})`,
     transition: theme.transitions.create('width'),
     width: '100%',
     border: 'solid grey 1px'
-    // [theme.breakpoints.up('sm')]: {
-    //   width: '12ch',
-    //   '&:focus': {
-    //     width: '30ch',
-    //   },
-    // },
   },
 }));
 
@@ -83,9 +92,9 @@ function Header() {
 
   const customStyle = {
     textDecoration: 'none',
-    color: 'black', 
-    '&:hover' : {
-      border : 'solid red 1px'
+    color: 'black',
+    '&:hover': {
+      border: 'solid red 1px'
     }
   }
   const textStyle = {
@@ -94,13 +103,66 @@ function Header() {
     }
   }
 
+
+
+
+  const [state, setState] = React.useState({ 
+    right: false,
+  });
+
+  const toggleDrawer = (anchor, open) => (event) => {
+    if (event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) {
+      return;
+    }
+
+    setState({ ...state, [anchor]: open });
+  };
+
+  const list = (anchor) => (
+    <Box
+      sx={{ width: anchor === 'top' || anchor === 'bottom' ? 'auto' : 250 }}
+      role="presentation"
+      onClick={toggleDrawer(anchor, false)}
+      onKeyDown={toggleDrawer(anchor, false)}
+    >
+      <List>
+        {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
+          <ListItem key={text} disablePadding>
+            <ListItemButton>
+              <ListItemIcon>
+                {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
+              </ListItemIcon>
+              <ListItemText primary={text} />
+            </ListItemButton>
+          </ListItem>
+        ))}
+      </List>
+      <Divider />
+      <List>
+        {['All mail', 'Trash', 'Spam'].map((text, index) => (
+          <ListItem key={text} disablePadding>
+            <ListItemButton>
+              <ListItemIcon>
+                {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
+              </ListItemIcon>
+              <ListItemText primary={text} />
+            </ListItemButton>
+          </ListItem>
+        ))}
+      </List>
+    </Box>
+  );
+
   return (
     <Box sx={{ flexGrow: 1 }}>
       <ThemeProvider theme={theme}>
         <AppBar position="static" color='customHeaderColor' enableColorOnDark={true}>
-          <Toolbar sx={{ border: 2 }} >
+          <Toolbar sx={{ borderBottom: 1, borderTop: 1, borderColor: 'gray', padding: '30px  ', display: 'flex', alignItems: 'center' }} >
 
-            <IconButton
+
+
+
+            {/* <IconButton
               size="large"
               edge="start"
               color="inherit"
@@ -108,7 +170,45 @@ function Header() {
               sx={{ mr: 2 }}
             >
               <MenuIcon />
-            </IconButton>
+            </IconButton> */}
+
+
+            <div>
+              {['left', 'right', 'top', 'bottom'].map((anchor) => (
+                <React.Fragment key={anchor}>
+                  <Button onClick={toggleDrawer(anchor, true)}>{anchor}</Button>
+                  <Drawer
+                    anchor={anchor}
+                    open={state[anchor]}
+                    onClose={toggleDrawer(anchor, false)}
+                  >
+                    {list(anchor)}
+                  </Drawer>
+                </React.Fragment>
+              ))}
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
             <Typography
               variant="h6"
@@ -116,14 +216,14 @@ function Header() {
               component="div"
               sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}
             >
-              Logoo
+              <img src={svgElement} alt="" />
             </Typography>
 
-            {/* LINKS */}
+            {/* LINKS  - change with array ! very practice*/}
             <Stack direction='row' spacing={2} marginRight={10} alignItems="center" justifyContent="space-around" width={500}>
 
               <Link style={customStyle} to="/"><Typography sx={textStyle}>Home</Typography></Link>
-              <Link style={customStyle} to="/categories"><Typography sx={textStyle}>Categories</Typography></Link>
+              <Link style={customStyle} to="/"><Typography sx={textStyle}>Categories</Typography></Link>
 
               <Dropdown>
                 <Dropdown.Toggle variant="none" id="dropdown-basic">
@@ -141,7 +241,7 @@ function Header() {
 
               <Dropdown>
                 <Dropdown.Toggle variant="none" id="dropdown-basic">
-                  <Link style={{ ...customStyle }} to="/categories"> Pages </Link>
+                  <Link style={{ ...customStyle }} to="/"> Pages </Link>
                 </Dropdown.Toggle>
 
                 <Dropdown.Menu>
@@ -153,7 +253,7 @@ function Header() {
 
               <Dropdown>
                 <Dropdown.Toggle variant="none" id="dropdown-basic">
-                  <Link style={{ ...customStyle }} to="/categories">
+                  <Link style={{ ...customStyle }} to="/  ">
                     Blog
                   </Link>
                 </Dropdown.Toggle>
@@ -183,69 +283,10 @@ function Header() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/:bookId" element={<BookDetails />} />
-
-          {/* <Route path="/categories" element={</>}/> */}
         </Routes>
       </ThemeProvider>
     </Box>
 
-
-    //  <Stack >
-
-    //   <div>Logoo</div>
-
-    //   <div className='d-flex '>
-
-    //     <Link to="/"><Button variant='light'>Home</Button></Link> 
-    //     <Link to="/categories"><Button variant='light'>Categories</Button></Link>
-
-    //     <Dropdown>
-    //       <Dropdown.Toggle variant="light" id="dropdown-basic">
-    //         Shop
-    //       </Dropdown.Toggle>
-
-    //       <Dropdown.Menu>
-    //         <Dropdown.Item href="#/action-1">Shop 1</Dropdown.Item>
-    //         <Dropdown.Item href="#/action-2">Shop 2</Dropdown.Item>
-    //         <Dropdown.Item href="#/action-3">Shop 3</Dropdown.Item>
-    //       </Dropdown.Menu>
-    //     </Dropdown>
-
-    //     <Dropdown>
-    //       <Dropdown.Toggle variant="light" id="dropdown-basic">
-    //         Pages
-    //       </Dropdown.Toggle>
-
-    //       <Dropdown.Menu>
-    //         <Dropdown.Item href="#/action-1">Shop 1</Dropdown.Item>
-    //         <Dropdown.Item href="#/action-2">Shop 2</Dropdown.Item>
-    //         <Dropdown.Item href="#/action-3">Shop 3</Dropdown.Item>
-    //       </Dropdown.Menu>
-    //     </Dropdown>
-
-    //     <Dropdown>
-    //       <Dropdown.Toggle variant="light" id="dropdown-basic">
-    //         Blog
-    //       </Dropdown.Toggle>
-
-    //       <Dropdown.Menu>
-    //         <Dropdown.Item href="#/action-1">Blog 1</Dropdown.Item>
-    //         <Dropdown.Item href="#/action-2">Blog 2</Dropdown.Item>
-    //         <Dropdown.Item href="#/action-3">Blog 3</Dropdown.Item>
-    //       </Dropdown.Menu>
-    //     </Dropdown>
-
-    //   </div>
-
-
-    //   {/* search */}
-    //   <div>
-    //     <input className='p-2' style={{ width: '340px' }} placeholder="Search by keywords" />
-    //   </div>
-
-
-
-    // </Stack>
   )
 }
 

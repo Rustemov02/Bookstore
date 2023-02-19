@@ -1,5 +1,4 @@
-import React from "react";
-import { useState } from "react";
+import React , { useState } from "react"; 
 import data from './data.json'
 import './Feature.css'
 import Card from '@mui/material/Card';
@@ -8,19 +7,22 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
-import { CardActionArea, Paper, Box, createTheme, ThemeProvider, CssBaseline, Chip, IconButton } from "@mui/material";
+import { CardActionArea, Box, createTheme, ThemeProvider, CssBaseline} from "@mui/material";
 import releasesImg from '././images/releases-book.jpg'
 import { Link } from "react-router-dom";
 
 import './Release.css'
 import { red, grey } from '@mui/material/colors'
 import { Stack } from "@mui/system";
+import { getReleasesCategories } from "./Redux/bookSlice";
+import { useDispatch } from "react-redux";
 
 function Release() {
     const [typeName, setTypeName] = useState('business')
     const categories = ['Business', 'Romance', 'Most-Viewed']
     const [active, setActive] = useState('Business')
-
+    const dispatch = useDispatch()
+    
     const theme = createTheme({
         palette: {
             mode: 'light',
@@ -72,7 +74,7 @@ function Release() {
     }
 
     return (
-        <Stack padding={10} >
+        <Stack padding={7} >
 
             <ThemeProvider theme={theme}>
                 <CssBaseline />
@@ -87,6 +89,7 @@ function Release() {
                                 onClick={(event) => {
                                     setTypeName(event.target.innerText.toLowerCase())
                                     setActive(item)
+                                    dispatch(getReleasesCategories(event.target.innerText.toLowerCase()))
                                 }}
                             >{item}</Link>
                         ))}
