@@ -1,7 +1,7 @@
 import React from 'react';
 import { Dropdown, Button, Carousel, Card } from 'react-bootstrap';
 
-import { Stack, createTheme, ThemeProvider } from '@mui/material'
+import { Stack, createTheme, ThemeProvider, CssBaseline } from '@mui/material'
 import { styled, alpha } from '@mui/material/styles';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
@@ -85,7 +85,6 @@ function Header() {
     palette: {
       mode: 'light',
       customHeaderColor: {
-        main: '#fafafa'
       }
     }
   })
@@ -156,6 +155,7 @@ function Header() {
   return (
     <Box sx={{ flexGrow: 1 }}>
       <ThemeProvider theme={theme}>
+        <CssBaseline/>
         <AppBar position="static" color='customHeaderColor' enableColorOnDark={true}>
           <Toolbar sx={{ borderBottom: 1, borderTop: 1, borderColor: 'gray', padding: '30px  ', display: 'flex', alignItems: 'center' }} >
 

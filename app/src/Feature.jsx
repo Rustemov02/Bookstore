@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import data from './data.json'
 import './Feature.css'
 
-import { CardMedia, Button, Typography, Card, CardContent, CardActions, Stack, Chip, CardActionArea, Box } from '@mui/material'
+import { CardMedia, Button, Typography, Card, CardContent, CardActions, Stack, Chip, CardActionArea, Box, ThemeProvider, CssBaseline, createTheme } from '@mui/material'
 import { red } from '@mui/material/colors'
 import { Link } from "react-router-dom";
 
@@ -20,8 +20,8 @@ function Feature() {
     const boxStyle = {
         border: 1,
         borderColor: 'gray',
-        boxShadow : '5px 5px 10px #e57373',
-        backgroundColor : 'white',
+        boxShadow: '5px 5px 10px #e57373',
+        backgroundColor: 'white',
         margin: 1,
         padding: 0.5,
         display: 'flex',
@@ -47,37 +47,45 @@ function Feature() {
         overflow: 'hidden',
         whiteSpace: 'nowrap'
     }
+
+    const theme = createTheme({
+        palette : {
+            mode : 'light'
+        }
+    })
     return (
+        <ThemeProvider theme={theme}>
+            <CssBaseline />
+            <Stack padding={7} bgcolor="white">
 
-        <Stack padding={7} bgcolor="white">
+                <Typography variant="h4" align="center">Featured Books</Typography>
+                <Stack direction="row" spacing={5} sx={{ pb: 3, pt: 2, justifyContent: 'center' }}>
+                    {categories.map((item, index) => (
+                        <Link className={`${active == item && "active"}`} key={index} style={{ textDecoration: 'none', color: 'black', paddingBottom: 10 }} onClick={(event) => {
+                            setActive(item)
+                            dispatch(getFeatureCategories(event.target.innerText.toLowerCase()))
+                        }} >{item}</Link>
+                    ))}
+                </Stack>
 
-            <Typography variant="h4" align="center">Featured Books</Typography>
-            <Stack direction="row" spacing={5} sx={{ pb: 3, pt: 2, justifyContent: 'center' }}>
-                {categories.map((item, index) => (
-                    <Link className={`${active == item && "active"}`} key={index} style={{ textDecoration: 'none', color: 'black', paddingBottom: 10 }} onClick={(event) => {
-                        setActive(item)
-                        dispatch(getFeatureCategories(event.target.innerText.toLowerCase()))
-                    }} >{item}</Link>
-                ))}
-            </Stack>
-
-            <Stack display='flex' flexDirection="row" flexWrap="wrap" justifyContent='center'>
-                {data.myData.filter(item => item.type === `${typeCategories}`).map((item, index) => (
-                    <Box component='div' sx={boxStyle} key={index}>
-                        <img src={item.book_image} alt='releasesImg' style={{ width: 'auto', height: 170 }} />
-                        <Box component='div' sx={TextBoxStyle}>
-                            <Link to={`/${item.id}`} style={{ textDecoration: 'none' }}>   <Typography variant="body2" style={{ textAlign: 'start' }} color='text.secondary'>{item.author}</Typography>
-                                <Typography variant="subtitle1" style={typography}>{item.title}</Typography>
-                            </Link>
-                            <Button size="small" sx={{ width: 110, display: 'flex', textItems: "flex-start" }} >Add To Cart </Button>
+                <Stack display='flex' flexDirection="row" flexWrap="wrap" justifyContent='center'>
+                    {data.myData.filter(item => item.type === `${typeCategories}`).map((item, index) => (
+                        <Box component='div' sx={boxStyle} key={index}>
+                            <img src={item.book_image} alt='releasesImg' style={{ width: 'auto', height: 170 }} />
+                            <Box component='div' sx={TextBoxStyle}>
+                                <Link to={`/${item.id}`} style={{ textDecoration: 'none' }}>   <Typography variant="body2" style={{ textAlign: 'start' }} color='text.secondary'>{item.author}</Typography>
+                                    <Typography variant="subtitle1" style={typography}>{item.title}</Typography>
+                                </Link>
+                                <Button size="small" sx={{ width: 110, display: 'flex', textItems: "flex-start" }} >Add To Cart </Button>
+                            </Box>
                         </Box>
-                    </Box>
-                ))}
+                    ))}
+
+                </Stack>
+
 
             </Stack>
-
-
-        </Stack>
+        </ThemeProvider>
     )
 }
 
