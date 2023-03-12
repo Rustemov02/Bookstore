@@ -4,22 +4,13 @@ import { useEffect } from "react";
 
 export const fetchBooks = createAsyncThunk(
     'books/fetchBooks',
-    async (type) => {
-        // https://api.nytimes.com/svc/books/v3/lists/current/hardcover-fiction.json?api-key=LgGpQsQpbEHlA1rGv2C40o9qgkfKeWgL
-        // https://www.googleapis.com/books/v1/volumes?q=${name}&key=AIzaSyBJnpf3R7eCWw2bmjWBfc-62XYOEMOD1IA
-        // https://www.googleapis.com/books/v1/volumes?q=hardcover-fiction=books&key=AIzaSyBJnpf3R7eCWw2bmjWBfc-62XYOEMOD1IA
-        // https://www.googleapis.com/books/v1/volumes/zyTCAlFPjgYC?key=AIzaSyBJnpf3R7eCWw2bmjWBfc-62XYOEMOD1IA
+    async (type) => { 
         const response = await axios.get(`https://api.nytimes.com/svc/books/v3/lists/current/hardcover-fiction.json?api-key=LgGpQsQpbEHlA1rGv2C40o9qgkfKeWgL`)
-        // return response.data.items[0].volumeInfo
         console.log(type)
         return response
-        // return response.data.results.books   
 
     }
-)
-
-
-
+) 
 export const bookSlice = createSlice({
     name: 'book',
     initialState: {
